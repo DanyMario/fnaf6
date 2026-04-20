@@ -32,6 +32,24 @@
 [ext_resource type="Texture2D" uid="uid://dxfsq1lpwd6o0" path="res://Monitor/Loading/Loading8.png" id="29_w7hve"]
 [ext_resource type="Texture2D" uid="uid://d3rgousql0seq" path="res://Monitor/Loading/Loading9.png" id="30_pnokk"]
 [ext_resource type="Texture2D" uid="uid://l47r3hsqw53t" path="res://Monitor/Loading/Loading10.png" id="31_c65ho"]
+[ext_resource type="Texture2D" uid="uid://c5gvcs71huk0j" path="res://Monitor/Tasks/PrintFlyers.png" id="33_imjx4"]
+[ext_resource type="Texture2D" uid="uid://ckned777lmrlk" path="res://Monitor/Tasks/PrintPoster.png" id="34_3n8ck"]
+[ext_resource type="Texture2D" uid="uid://ckdwlfkd0125f" path="res://Monitor/Tasks/PrintMenus.png" id="35_6fhrg"]
+[ext_resource type="Texture2D" uid="uid://csv4q3n165ehe" path="res://Monitor/1739.png" id="36_3n8ck"]
+[ext_resource type="Texture2D" uid="uid://c7hvi2twa3vb3" path="res://Monitor/Tasks/UnclogToilets.png" id="37_pnokk"]
+[ext_resource type="Texture2D" uid="uid://cl6xjf556ux78" path="res://Monitor/Tasks/CleanOvens.png" id="38_c65ho"]
+[ext_resource type="Texture2D" uid="uid://c1jgjpxy42ife" path="res://Monitor/Tasks/ReplaceBulbs.png" id="39_u15w0"]
+[ext_resource type="Texture2D" uid="uid://dexkd0e1tsfow" path="res://Monitor/Tasks/X2Printer.png" id="40_gokir"]
+[ext_resource type="Texture2D" uid="uid://bkr0vnnsn7dsw" path="res://Monitor/Tasks/HighSpeedUplink.png" id="41_iy6jf"]
+[ext_resource type="Texture2D" uid="uid://eftokd4jx1rm" path="res://Monitor/Tasks/HireHandyman.png" id="42_mspty"]
+[ext_resource type="Texture2D" uid="uid://cs8w442qfhakg" path="res://Monitor/Tasks/$.png" id="43_mspty"]
+[ext_resource type="FontFile" uid="uid://5gn01cmrcc8t" path="res://Monitor/FiveFontsatFreddy's-Regular.ttf" id="44_3sa5f"]
+[ext_resource type="Texture2D" uid="uid://gg2psqvfeywx" path="res://Monitor/Map.png" id="45_3sa5f"]
+[ext_resource type="Script" uid="uid://e4vu28xcwmra" path="res://motion.gd" id="45_tgda6"]
+[ext_resource type="Texture2D" uid="uid://c88xiu2ggtnde" path="res://Monitor/Tasks/Warning.png" id="46_caclu"]
+[ext_resource type="Script" uid="uid://d1knbc0v8hsyl" path="res://activate.gd" id="46_cvxjx"]
+[ext_resource type="Texture2D" uid="uid://lremb3w7a4o5" path="res://Monitor/Tasks/ActivateMotionScanning.png" id="46_pj4dt"]
+[ext_resource type="Texture2D" uid="uid://dv2jswvopdbfq" path="res://Monitor/Tasks/Scanning....png" id="48_nuv24"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_vuxbm"]
 frames = 2
@@ -69,6 +87,10 @@ frame_8/texture = ExtResource("30_pnokk")
 frame_8/duration = 1.0
 frame_9/texture = ExtResource("31_c65ho")
 frame_9/duration = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pj4dt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjhc2"]
 
 [node name="Node2D" type="Node2D" unique_id=1284705897]
 position = Vector2(158, 132)
@@ -115,42 +137,13 @@ Tabs = Array[Texture2D]([ExtResource("1_my12u"), ExtResource("5_01a23"), ExtReso
 SelectedTabs = Array[AnimatedTexture]([SubResource("AnimatedTexture_vuxbm"), SubResource("AnimatedTexture_bqlls"), null, null])
 
 [node name="Tasks" type="Control" parent="Control" unique_id=962914624]
+visible = false
 anchors_preset = 0
 offset_left = 158.0
 offset_top = 131.0
 offset_right = 198.0
 offset_bottom = 171.0
 script = ExtResource("7_w58xd")
-
-[node name="Suplies" type="ItemList" parent="Control/Tasks" unique_id=2072466203]
-visible = false
-top_level = true
-clip_children = 2
-clip_contents = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.015625
-anchor_top = 0.15123457
-anchor_right = 0.019097222
-anchor_bottom = 0.15123457
-offset_right = 308.0
-offset_bottom = 228.0
-theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
-allow_reselect = true
-allow_search = false
-auto_width = true
-auto_height = true
-text_overrun_behavior = 0
-wraparound_items = false
-item_count = 5
-same_column_width = true
-icon_mode = 0
-item_0/icon = ExtResource("5_kjnmq")
-item_1/icon = ExtResource("8_01a23")
-item_2/icon = ExtResource("9_nx3uv")
-item_3/icon = ExtResource("10_vuxbm")
-item_4/icon = ExtResource("11_bqlls")
-metadata/_edit_use_anchors_ = true
 
 [node name="Main" type="ItemList" parent="Control/Tasks" unique_id=21713900]
 visible = false
@@ -181,45 +174,24 @@ item_4/selectable = false
 item_4/disabled = true
 metadata/_edit_use_anchors_ = true
 
-[node name="Back" type="ItemList" parent="Control/Tasks" unique_id=1365467557]
+[node name="Suplies2" type="VBoxContainer" parent="Control/Tasks" unique_id=1272587806]
 visible = false
-top_level = true
-clip_children = 2
-clip_contents = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.020833334
-anchor_top = 0.7314815
-anchor_right = 0.02113194
-anchor_bottom = 0.7314815
-offset_right = 311.656
-offset_bottom = 52.0
-allow_reselect = true
-allow_search = false
-auto_width = true
-auto_height = true
-wraparound_items = false
-item_count = 1
-same_column_width = true
-icon_mode = 0
-item_0/icon = ExtResource("17_sbskp")
-metadata/_edit_use_anchors_ = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Tasks" unique_id=1272587806]
 layout_mode = 0
 offset_left = -134.0
 offset_top = -26.0
 offset_right = 162.0
 offset_bottom = 14.0
 script = ExtResource("22_j6g7k")
-tasks = Array[Resource]([null])
+task_timer = 9
+upgrade_timer = 7
+upgrade = 1
 
-[node name="TextureButton5" type="TextureButton" parent="Control/Tasks/VBoxContainer" unique_id=529453999]
+[node name="order_cups" type="TextureButton" parent="Control/Tasks/Suplies2" unique_id=529453999]
 layout_mode = 2
 texture_normal = ExtResource("5_kjnmq")
 stretch_mode = 0
 
-[node name="loading" type="TextureRect" parent="Control/Tasks/VBoxContainer/TextureButton5" unique_id=498458890]
+[node name="loading" type="TextureRect" parent="Control/Tasks/Suplies2/order_cups" unique_id=498458890]
 visible = false
 layout_mode = 0
 offset_left = 260.0
@@ -229,12 +201,12 @@ offset_bottom = 36.0
 texture = SubResource("AnimatedTexture_u15w0")
 expand_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="Control/Tasks/VBoxContainer" unique_id=1509016452]
+[node name="order_plates" type="TextureButton" parent="Control/Tasks/Suplies2" unique_id=1509016452]
 layout_mode = 2
 texture_normal = ExtResource("8_01a23")
 stretch_mode = 0
 
-[node name="loading" type="TextureRect" parent="Control/Tasks/VBoxContainer/TextureButton" unique_id=1443498035]
+[node name="loading" type="TextureRect" parent="Control/Tasks/Suplies2/order_plates" unique_id=1443498035]
 visible = false
 layout_mode = 0
 offset_left = 260.0
@@ -244,12 +216,12 @@ offset_bottom = 36.0
 texture = SubResource("AnimatedTexture_u15w0")
 expand_mode = 2
 
-[node name="TextureButton2" type="TextureButton" parent="Control/Tasks/VBoxContainer" unique_id=592330220]
+[node name="order_napkins" type="TextureButton" parent="Control/Tasks/Suplies2" unique_id=592330220]
 layout_mode = 2
 texture_normal = ExtResource("9_nx3uv")
 stretch_mode = 0
 
-[node name="loading" type="TextureRect" parent="Control/Tasks/VBoxContainer/TextureButton2" unique_id=667343320]
+[node name="loading" type="TextureRect" parent="Control/Tasks/Suplies2/order_napkins" unique_id=667343320]
 visible = false
 layout_mode = 0
 offset_left = 260.0
@@ -259,12 +231,12 @@ offset_bottom = 36.0
 texture = SubResource("AnimatedTexture_u15w0")
 expand_mode = 2
 
-[node name="TextureButton3" type="TextureButton" parent="Control/Tasks/VBoxContainer" unique_id=914274727]
+[node name="order_utensils" type="TextureButton" parent="Control/Tasks/Suplies2" unique_id=914274727]
 layout_mode = 2
 texture_normal = ExtResource("10_vuxbm")
 stretch_mode = 0
 
-[node name="loading" type="TextureRect" parent="Control/Tasks/VBoxContainer/TextureButton3" unique_id=1385862363]
+[node name="loading" type="TextureRect" parent="Control/Tasks/Suplies2/order_utensils" unique_id=1385862363]
 visible = false
 layout_mode = 0
 offset_left = 260.0
@@ -274,12 +246,12 @@ offset_bottom = 36.0
 texture = SubResource("AnimatedTexture_u15w0")
 expand_mode = 2
 
-[node name="TextureButton4" type="TextureButton" parent="Control/Tasks/VBoxContainer" unique_id=961176614]
+[node name="order_pizza_kits" type="TextureButton" parent="Control/Tasks/Suplies2" unique_id=961176614]
 layout_mode = 2
 texture_normal = ExtResource("11_bqlls")
 stretch_mode = 0
 
-[node name="loading" type="TextureRect" parent="Control/Tasks/VBoxContainer/TextureButton4" unique_id=1412902599]
+[node name="loading" type="TextureRect" parent="Control/Tasks/Suplies2/order_pizza_kits" unique_id=1412902599]
 visible = false
 layout_mode = 0
 offset_left = 260.0
@@ -298,7 +270,373 @@ offset_bottom = 387.0
 texture_normal = ExtResource("17_sbskp")
 stretch_mode = 0
 
+[node name="ads" type="VBoxContainer" parent="Control/Tasks" unique_id=1946483014]
+visible = false
+layout_mode = 0
+offset_left = -134.0
+offset_top = -26.0
+offset_right = 162.0
+offset_bottom = 14.0
+script = ExtResource("22_j6g7k")
+task_timer = 16
+upgrade_timer = 14
+
+[node name="print_flyers" type="TextureButton" parent="Control/Tasks/ads" unique_id=310464369]
+layout_mode = 2
+texture_normal = ExtResource("33_imjx4")
+stretch_mode = 0
+
+[node name="loading" type="TextureRect" parent="Control/Tasks/ads/print_flyers" unique_id=1812336384]
+visible = false
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 292.0
+offset_bottom = 36.0
+texture = SubResource("AnimatedTexture_u15w0")
+expand_mode = 2
+
+[node name="print_posters" type="TextureButton" parent="Control/Tasks/ads" unique_id=1166801369]
+layout_mode = 2
+texture_normal = ExtResource("34_3n8ck")
+stretch_mode = 0
+
+[node name="loading" type="TextureRect" parent="Control/Tasks/ads/print_posters" unique_id=1273534724]
+visible = false
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 292.0
+offset_bottom = 36.0
+texture = SubResource("AnimatedTexture_u15w0")
+expand_mode = 2
+
+[node name="print_menus" type="TextureButton" parent="Control/Tasks/ads" unique_id=1835361493]
+layout_mode = 2
+texture_normal = ExtResource("35_6fhrg")
+stretch_mode = 0
+
+[node name="loading" type="TextureRect" parent="Control/Tasks/ads/print_menus" unique_id=119397686]
+visible = false
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 292.0
+offset_bottom = 36.0
+texture = SubResource("AnimatedTexture_u15w0")
+expand_mode = 2
+
+[node name="please_wait" type="TextureRect" parent="Control/Tasks" unique_id=287856240]
+layout_mode = 0
+offset_left = -125.0
+offset_top = 214.0
+offset_right = 164.18518
+offset_bottom = 246.0
+texture = ExtResource("36_3n8ck")
+expand_mode = 3
+
+[node name="maint" type="VBoxContainer" parent="Control/Tasks" unique_id=1715420408]
+visible = false
+layout_mode = 0
+offset_left = -134.0
+offset_top = -26.0
+offset_right = 162.0
+offset_bottom = 14.0
+script = ExtResource("22_j6g7k")
+task_timer = 13
+upgrade_timer = 10
+upgrade = 2
+
+[node name="unclog_toilets" type="TextureButton" parent="Control/Tasks/maint" unique_id=909901442]
+layout_mode = 2
+texture_normal = ExtResource("37_pnokk")
+stretch_mode = 0
+
+[node name="loading" type="TextureRect" parent="Control/Tasks/maint/unclog_toilets" unique_id=698796634]
+visible = false
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 292.0
+offset_bottom = 36.0
+texture = SubResource("AnimatedTexture_u15w0")
+expand_mode = 2
+
+[node name="clean_ovens" type="TextureButton" parent="Control/Tasks/maint" unique_id=1623306656]
+layout_mode = 2
+texture_normal = ExtResource("38_c65ho")
+stretch_mode = 0
+
+[node name="loading" type="TextureRect" parent="Control/Tasks/maint/clean_ovens" unique_id=1436001981]
+visible = false
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 292.0
+offset_bottom = 36.0
+texture = SubResource("AnimatedTexture_u15w0")
+expand_mode = 2
+
+[node name="replace_bulbs" type="TextureButton" parent="Control/Tasks/maint" unique_id=121749584]
+layout_mode = 2
+texture_normal = ExtResource("39_u15w0")
+stretch_mode = 0
+
+[node name="loading" type="TextureRect" parent="Control/Tasks/maint/replace_bulbs" unique_id=1965720591]
+visible = false
+layout_mode = 0
+offset_left = 260.0
+offset_top = 4.0
+offset_right = 292.0
+offset_bottom = 36.0
+texture = SubResource("AnimatedTexture_u15w0")
+expand_mode = 2
+
+[node name="equip" type="VBoxContainer" parent="Control/Tasks" unique_id=196822332]
+layout_mode = 0
+offset_left = -134.0
+offset_top = -26.0
+offset_right = 162.0
+offset_bottom = 14.0
+script = ExtResource("22_j6g7k")
+buying_menu = true
+
+[node name="printer" type="TextureButton" parent="Control/Tasks/equip" unique_id=1023369582]
+layout_mode = 2
+texture_normal = ExtResource("40_gokir")
+stretch_mode = 0
+
+[node name="hs_internet" type="TextureButton" parent="Control/Tasks/equip" unique_id=31292998]
+layout_mode = 2
+texture_normal = ExtResource("41_iy6jf")
+stretch_mode = 0
+
+[node name="handyman" type="TextureButton" parent="Control/Tasks/equip" unique_id=1535129471]
+layout_mode = 2
+texture_normal = ExtResource("42_mspty")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="Control/Tasks" unique_id=2113355335]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 341.0
+offset_right = 352.0
+offset_bottom = 381.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("43_mspty")
+expand_mode = 4
+
+[node name="money_label" type="Label" parent="Control/Tasks/TextureRect" unique_id=1117302083]
+layout_mode = 0
+offset_left = 49.333344
+offset_top = 7.9999237
+offset_right = 169.33334
+offset_bottom = 41.999924
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("44_3sa5f")
+
+[node name="Motion" type="Control" parent="Control" unique_id=786582295]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("45_tgda6")
+
+[node name="activate" type="Button" parent="Control/Motion" unique_id=1749220815]
+layout_mode = 0
+offset_left = 482.0
+offset_top = 472.0
+offset_right = 580.0
+offset_bottom = 519.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pj4dt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rjhc2")
+action_mode = 0
+flat = true
+script = ExtResource("46_cvxjx")
+
+[node name="not_active" type="TextureRect" parent="Control/Motion/activate" unique_id=612525587]
+layout_mode = 0
+offset_left = -451.0
+offset_top = -1.0
+offset_right = 101.0
+offset_bottom = 49.0
+texture = ExtResource("46_pj4dt")
+
+[node name="active" type="TextureRect" parent="Control/Motion/activate" unique_id=1012216157]
+visible = false
+layout_mode = 0
+offset_left = -450.0
+offset_top = 14.0
+offset_right = 102.0
+offset_bottom = 64.0
+texture = ExtResource("48_nuv24")
+stretch_mode = 2
+
+[node name="Map" type="TextureRect" parent="Control/Motion" unique_id=1615365514]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 102.0
+offset_right = 644.0
+offset_bottom = 437.0
+texture = ExtResource("45_3sa5f")
+
+[node name="5_1" type="TextureRect" parent="Control/Motion/Map" unique_id=1013767231]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 568.00006
+offset_top = 291.0
+offset_right = 614.25
+offset_bottom = 332.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="5_2" type="TextureRect" parent="Control/Motion/Map" unique_id=1781728292]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 568.0
+offset_top = 150.00003
+offset_right = 614.24994
+offset_bottom = 191.00003
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="5_3" type="TextureRect" parent="Control/Motion/Map" unique_id=1223808222]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 568.00006
+offset_top = 11.0000305
+offset_right = 614.25
+offset_bottom = 52.00003
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="4_2" type="TextureRect" parent="Control/Motion/Map" unique_id=1783474990]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 428.00003
+offset_top = 291.0
+offset_right = 474.24997
+offset_bottom = 332.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="4_1" type="TextureRect" parent="Control/Motion/Map" unique_id=1420237695]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 428.0
+offset_top = 151.0
+offset_right = 474.24994
+offset_bottom = 192.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="4_0" type="TextureRect" parent="Control/Motion/Map" unique_id=2114025536]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 428.0
+offset_top = 11.0
+offset_right = 474.24994
+offset_bottom = 52.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="3_0" type="TextureRect" parent="Control/Motion/Map" unique_id=1571844284]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 287.00003
+offset_top = 11.0
+offset_right = 333.24997
+offset_bottom = 52.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="2_2" type="TextureRect" parent="Control/Motion/Map" unique_id=1932406930]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 147.00002
+offset_top = 291.0
+offset_right = 193.00002
+offset_bottom = 332.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="1_1" type="TextureRect" parent="Control/Motion/Map" unique_id=320113968]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 147.0
+offset_top = 150.0
+offset_right = 193.0
+offset_bottom = 191.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="1_0" type="TextureRect" parent="Control/Motion/Map" unique_id=2040427070]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 147.0
+offset_top = 11.0
+offset_right = 193.0
+offset_bottom = 52.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="0_2" type="TextureRect" parent="Control/Motion/Map" unique_id=1430633200]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 8.0000305
+offset_top = 291.0
+offset_right = 54.00003
+offset_bottom = 332.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="0_1" type="TextureRect" parent="Control/Motion/Map" unique_id=1936327564]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 8.0000305
+offset_top = 150.0
+offset_right = 54.00003
+offset_bottom = 191.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="0_0" type="TextureRect" parent="Control/Motion/Map" unique_id=1608248325]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 8.0000305
+offset_top = 11.0
+offset_right = 54.00003
+offset_bottom = 52.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="almost_left" type="TextureRect" parent="Control/Motion/Map" unique_id=122188164]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 245.0
+offset_top = 291.0
+offset_right = 291.0
+offset_bottom = 332.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="almost_right" type="TextureRect" parent="Control/Motion/Map" unique_id=1427134560]
+modulate = Color(1, 1, 1, 0.69803923)
+layout_mode = 0
+offset_left = 328.00003
+offset_top = 291.0
+offset_right = 374.00003
+offset_bottom = 332.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("46_caclu")
+
+[node name="player" type="ColorRect" parent="Control/Motion/Map" unique_id=187603586]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 302.0
+offset_right = 312.0
+offset_bottom = 315.0
+color = Color(1, 1, 1, 0.68235296)
+
 [connection signal="set_task_visual" from="Control" to="Control/Tasks" method="_on_control_set_task_visual"]
 [connection signal="item_selected" from="Control/Tasks/Main" to="Control/Tasks" method="_on_main_item_selected"]
-[connection signal="item_selected" from="Control/Tasks/Back" to="Control/Tasks" method="_on_back_item_selected"]
 [connection signal="pressed" from="Control/Tasks/TextureButton" to="Control/Tasks" method="_on_back_item_selected"]

@@ -19,7 +19,6 @@ func _ready() -> void:
 		set_tab_icon(i,textu)
 		i += 1
 	
-	
 	pass # Replace with function body.
 
 
