@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds8ctvrv3180n"
-path="res://.godot/imported/Motion.png-063d4094707c4c006a01a2b1b354052c.ctex"
+uid="uid://ckdl1wry2ijks"
+path="res://.godot/imported/Tasks.png-a32e0057fa677809510f35945ce13d50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Motion.png"
-dest_files=["res://.godot/imported/Motion.png-063d4094707c4c006a01a2b1b354052c.ctex"]
+source_file="res://Monitor/Tasks.png"
+dest_files=["res://.godot/imported/Tasks.png-a32e0057fa677809510f35945ce13d50.ctex"]
 
 [params]
 
